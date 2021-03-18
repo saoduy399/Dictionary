@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dictionary</title>
+</head>
+<body>
+<form>
+  <fieldset>
+    <legend>Dictionary</legend>
+    <input type="text" id="type" value="">
+    <p id="show"></p>
+    <button type="button" onclick="display()">Translate</button>
+  </fieldset>
+  <script>
+    let english=["what", "where", "when", "why"];
+    let vietnam=["cai gi", "o dau", "khi nao", "tai sao"];
+    function display(){
+      let word=document.getElementById("type").value;
+      for( let i=0;i<=english.length;i++){
+        if(word===english[i]){
+          document.getElementById("show").innerHTML=vietnam[i];
+          break;
+        } else {
+          document.getElementById("show").innerText="Error";
+        }
+      }
+    }
+  </script>
+</form>
+</body>
+</html>
